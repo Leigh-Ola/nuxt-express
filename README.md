@@ -1,4 +1,4 @@
-# Euxt-Express example app
+# Nuxt-Express example app
 
 > A basic Nuxt.js website with Express.js as server middleware and TailwindCss for quicker development
 
