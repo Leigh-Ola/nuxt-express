@@ -3,30 +3,30 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'universal',
+  mode: "universal",
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'server',
+  target: "server",
   /*
    ** Global headers for each page
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'My Nuxt Site',
+    title: "My Nuxt Site",
     // meta tags
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Basic Nuxt Site from Leigh' || '',
+        hid: "description",
+        name: "description",
+        content: "Basic Nuxt Site from Leigh" || "",
       },
     ],
     // links (css should be here)
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     // javascript files
     script: [],
   },
@@ -34,7 +34,7 @@ export default {
    * Global Middleware
    */
   router: {
-    middleware: ['test'],
+    middleware: ["test"],
   },
   /**
    * Server Middleware
@@ -42,12 +42,19 @@ export default {
    */
   serverMiddleware: [
     // 'redirect-ssl',
-    { path: '/api', handler: '~/api/index.js' },
+    { path: "/api", handler: "~/api/index.js" },
   ],
+  /**
+   * Server configuration
+   */
+  server: {
+    port: 3000, // default: 3000
+    // host: "0.0.0.0", // default: localhost
+  },
   /*
    ** Global CSS
    */
-  css: ['~/assets/styles/main.css'],
+  css: ["~/assets/styles/main.css"],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -64,17 +71,17 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module', // <- removed eslint
-    '@nuxtjs/tailwindcss', // <- installed with 'npm install --save-dev @nuxtjs/tailwindcss'
+    "@nuxtjs/tailwindcss", // <- installed with 'npm install --save-dev @nuxtjs/tailwindcss'
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
     // Doc: https://github.com/nuxt/content
-    '@nuxt/content',
+    "@nuxt/content",
   ],
   /*
    ** Axios module configuration
@@ -91,4 +98,4 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
-}
+};
