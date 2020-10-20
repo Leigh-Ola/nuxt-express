@@ -54,8 +54,12 @@ export default {
   /**
    * Environment variabes
    */
-  env: {
-    baseUrl: process.env.BASE_URL || "http://localhost:3000",
+  publicRuntimeConfig: {
+    // available on both client & server
+    API_URL: process.env.baseURL || "localhost:3000",
+  },
+  privateRuntimeConfig: {
+    // available on server only. takes precedence over publicRuntimeConfig
   },
   /*
    ** Global CSS

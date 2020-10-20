@@ -2,7 +2,14 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">nuxt-example-app</h1>
+      <h1 class="title">
+        nuxt-example-app
+        <p>
+          <small
+            ><center>URL: {{ $config.baseURL }}</center></small
+          >
+        </p>
+      </h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -29,17 +36,17 @@ export default {
     // the component's/page's vue instance
     // methods and properties are accessible here
     return {
-      title: 'HomeLee Nuxt Site',
+      title: "HomeLee Nuxt Site",
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content: "Leigh's awesome Nuxt app",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style>
@@ -53,8 +60,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
